@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const db = require('../utils/parametrosDynamo')
 const request = require('request-json')
-const client = request.createClient('https://enviospedido.azurewebsites.net/')
+const client = request.createClient('https://enviospedido.azurewebsites.net/') // TODO ajustar a la url de servicio de AWS
 
 
 /* GET lista de pedidos*/
@@ -26,9 +26,9 @@ router.get('/:pedidoId/procesarPedido', (req, res) => {
       const contenidoReq = {operario: req.cookies.empleado, pedido: pedido}
       const solicitud = {
         'input': JSON.stringify(contenidoReq),
-        'stateMachineArn': 'arn:aws:states:us-east-1:255410818070:stateMachine:solicitud-dev-procesarSolicitudPedido'
+        'stateMachineArn': 'arn:aws:states:us-east-1:255410818070:stateMachine:solicitud-dev-procesarSolicitudPedido' // TODO ajustar a la url de servicio de AWS
       }
-      client.post('https://lw8zj2j136.execute-api.us-east-1.amazonaws.com/dev/solicitud', solicitud, (err, resServer, body) => {
+      client.post('https://lw8zj2j136.execute-api.us-east-1.amazonaws.com/dev/solicitud', solicitud, (err, resServer, body) => {  // TODO ajustar a la url de servicio de AWS
         if (resServer.statusCode === 200 && body && body.startDate) {
           res.redirect('/pedido/' + req.params.pedidoId + '/solicitudAbastecimiento')
         } else {
@@ -83,7 +83,7 @@ router.post('/:pedidoId/bodega/:bodegaId/envio', (req, res) => {
     fechaDeEntrega: req.body.fechaDeEntrega,
     fechaDeSalida: req.body.fechaDeSalida
   }
-  client.post('https://ozq7bozi5k.execute-api.us-east-1.amazonaws.com/dev/pedido/' + req.params.pedidoId + '/solicitud/' + req.params.bodegaId + '/envio',
+  client.post('https://ozq7bozi5k.execute-api.us-east-1.amazonaws.com/dev/pedido/' + req.params.pedidoId + '/solicitud/' + req.params.bodegaId + '/envio',  // TODO ajustar a la url de servicio de AWS
     solicitud, (err, resServer, body) => {
       if (err || resServer.statusCode != 200) {
         manejadorError(res, 'Error en el server al crear envío')
