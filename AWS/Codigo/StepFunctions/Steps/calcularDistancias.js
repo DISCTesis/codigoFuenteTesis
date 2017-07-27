@@ -2,7 +2,7 @@
 const AWS = require('aws-sdk')
 const dynamoDb = new AWS.DynamoDB.DocumentClient()
 const googleMapsClient = require('@google/maps').createClient({
-  key: 'AIzaSyDogDzCNpGOaS-8GOyqznisBloTt5VwQTs'
+  key: '' // TODO agregar claves de GoogleMaps
 })
 module.exports.darDistancias = function (event, context, callback) {
   Promise.all(obtenerBodegas(event.bodegas)).then(function (data) {
