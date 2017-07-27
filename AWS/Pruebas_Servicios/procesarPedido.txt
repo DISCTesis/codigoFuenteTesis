@@ -1,3 +1,6 @@
+
+URL: /:pedidoId/procesarPedido
+Entrada (app/json): 
 {     "input": "{\"operario\":{\"_id\":\"1\",\"apellidos\":\"Castro Duarte\",\"cargo\":\"Operario de area de entrega\",\"correo\":\"js.castro125@uniandes.edu.co\",\"fechaNacimiento\":\"1994 10 04\",\"nombres\":\"Juan Sebastian\",\"numeroDocumento\":1075674195,\"sangreRH\":\"O+\",\"tipoDocumento\":\"CC\"},\"pedido\":{\"_id\":\"1\",\"direccionEntrega\":\"DG 4 A 28 A 82\",\"esPagoEnEfectivo\":1,\"estadoActual\":1,\"fechaEntregaMaxima\":\"2017 03 27 19 51 00\",\"fechaSolicitud\":\"2017 03 25 19 51 00\",\"items\":[{\"cantidad\":5,\"productoId\":\"1\"},{\"cantidad\":7,\"productoId\":\"2\"},{\"cantidad\":8,\"productoId\":\"3\"},{\"cantidad\":10,\"productoId\":\"4\"}],\"ubicacionGeografica\":{\"latitud\":5.012582,\"longitud\":-73.99312}}}",     
 	"stateMachineArn": "arn:aws:states:us-east-1:255410818070:stateMachine:solicitud-dev-procesarSolicitudPedido" 
 }
