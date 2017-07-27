@@ -1,0 +1,22 @@
+<% include top %>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+
+
+<div class="container">
+    <form class="form-signin" method="POST" action="envio">
+        <h2 class="form-signin-heading"><%= title %></h2>
+        <label for="inConductor" class="sr-only">Identificación del conductor: </label>
+        <input type="text" id="idConductor" name="conductorId" class="form-control" placeholder="Identificación del conductor" required >
+        <label for="inputFechaEntrega" class="sr-only">Fecha de entrega</label>
+        <input type="text" id="fechaDeEntrega" name="fechaDeEntrega" class="form-control" placeholder="Fecha de entrega yyyy-mm-dd" required >
+        <label for="inputPassword" class="sr-only">Fecha de salida</label>
+        <input type="text" id="fechaDeSalida" name="fechaDeSalida" class="form-control" placeholder="Fecha de salida yyyy-mm-dd" required >
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Registrar Administrador">Envíar</button>
+    </form>
+
+</div> <!-- /container -->
+</div>
+
+<% include bottom%>

@@ -1,0 +1,52 @@
+<% include top.ejs%>
+
+<div class="jumbotron">
+    <div class ="container-fluid">
+        <div class="navbar">
+
+            <p></p>
+        </div>
+
+
+        <div class="col-sm-6 col-md-8 col-ms-6 text-center hover-me">
+
+            <%
+            if (administradores && administradores.length>0) {
+            administradores.forEach(function(admin) {
+            %>
+
+            <div class="inner">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><%= admin ? admin.nombreEmpresa : ""%></h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>Email: <%= admin ? admin.emailAdmin : "" %></p>
+                        <p><a href= <%= admin? "/administradores/"+admin.url+"/proyectos": "" %>>Ver proyectos</a></p>
+                    </div>
+
+                </div>
+            </div>
+            <%
+            }); %>
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+            <%} else
+            {%>
+            <h3>No hay empresas buscando Diseñadores</h3>
+            <% }%>
+
+
+
+        </div>
+    </div>
+
+</div>
+
+<% include bottom.ejs%>

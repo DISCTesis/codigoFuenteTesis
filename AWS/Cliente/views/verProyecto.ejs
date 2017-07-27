@@ -1,0 +1,87 @@
+<% include top.ejs %>
+
+<div class="jumbotron">
+    <div class ="container-fluid">
+        <div class="navbar">
+            <div class="col-sm-6 col-md-8 col-ms-6 text-center hover-me">
+            <h1>  <%= pry ? pry.nombre:'No disponible' %></h1>
+            <p>Descripcion: <%= pry ? pry.descripcion:'No disponible' %></p>
+            <p>Valor Pago : $<%= pry ? pry.valorPago:'No disponible' %></p>
+                <%if(hideLogin&& username==pageAdmin){%>
+            <h4><a href=<%= newUrl3? newUrl4: ""%>>Actualizar proyecto</a></h4>
+
+            <form class="form-signin" method="GET" action=<%= newUrl3? newUrl3: ""%>>
+                <button class="class=btn btn-lg btn-danger" type="danger" value="Eliminar Proyecto">Eliminar Proyecto</button>
+            </form>
+                <%}%>
+            <p><a href=<%= newUrl2? newUrl2: ""%>>Agregar nuevo diseño</a></p>
+            <h5><a href=<%= newUrl? newUrl: ""%>>Volver</a></h5>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-8 col-ms-6 text-center hover-me">
+
+            <%
+
+            /*function Uint8ToBase64(u8Arr){
+                var CHUNK_SIZE = 0x8000; //arbitrary number
+                var index = 0;
+                var length = u8Arr.length;
+                var result = '';
+                var slice;
+                while (index < length) {
+                    slice = u8Arr.subarray(index, Math.min(index + CHUNK_SIZE, length));
+                    result += String.fromCharCode.apply(null, slice);
+                    index += CHUNK_SIZE;
+                }
+            }*/
+
+            if (disenios&&disenios.length>0) {
+                disenios.forEach(function(disenio) {
+                   // if(disenio.estado=="Disponible"){
+            %>
+            <div class="inner">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><%= disenio ?disenio.nombre + disenio.apellido: "" %></h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <!--<img src = "https://s-media-cache-ak0.pinimg.com/736x/d2/bc/8d/d2bc8d0af5a516c34683ffb7b23b5a71.jpg" width = "300" height="300"></img>-->
+                        <img src = <%= "https://s3.amazonaws.com/"+bucketName+"/"+disenio.imagenOriginal%>  width="300" height="300"></img>
+                        <p>Estado: <%= disenio ? disenio.estado: "" %></p>
+                        <%if(hideLogin&& username==pageAdmin){%>
+                        <p>Precio: <%= disenio ?disenio.precio: "" %></p>
+                        <p>Email: <%= disenio ?disenio.emailDiseniador: "" %></p>
+                        <h4><a  href=<%=urlDescargaOriginal+disenio.id%>> Descargar Diseño Original</a></h4>
+                        <h4><a  href=<%=urlDescargaConvertido+disenio.id%>> Descargar Diseño Convertido</a></h4>
+                        <%}%>
+                        <p>Fecha: <%= disenio ?disenio.fechaCreacion: "" %></p>
+                    </div>
+                </div>
+            </div>
+            <%}
+            //}
+            );%>
+            <ul class="pagination">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+            <%} else
+            {%>
+                <h3>No hay diseños para este proyecto</h3>
+            <% }%>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+<% include bottom.ejs%>

@@ -1,0 +1,34 @@
+{
+  "name": "designmatch",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "engines": {
+    "node": "7.2.1"
+  },
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "ejs": "*",
+    "express": "~4.14.1",
+    "express-session": "^1.15.1",
+    "formidable": "*",
+    "fs-extra": "*",
+    "jimp": "*",
+    "morgan": "~1.7.0",
+    "passport": "*",
+    "passport-local": "*",
+    "serve-favicon": "~2.3.2",
+    "util": "*",
+    "mime":"*",
+    "aws-sdk":"*",
+    "uuid":"*",
+    "sqs-consumer": "*",
+    "nconf":"^0.8.4",
+	"sendgrid": "^5.0.1",
+    "request-json":"*"
+  }
+}

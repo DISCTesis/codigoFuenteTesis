@@ -1,0 +1,56 @@
+<% include top.ejs%>
+
+<div class="jumbotron">
+<div class ="container-fluid">
+    <div class="navbar">
+        <%if(hideLogin && username===pageAdmin){%>
+        <h3><a  href=<%= newUrl? newUrl: ""%>> Crear un nuevo proyecto </a></h3>
+        <p></p>
+        <%}%>
+    </div>
+
+
+    <div class="col-sm-6 col-md-8 col-ms-6 text-center hover-me">
+
+          <%
+          if (proyectos && proyectos.length>0) {
+          proyectos.forEach(function(proyecto) {
+          %>
+
+        <div class="inner">
+
+          <div class="panel panel-primary">
+              <div class="panel-heading">
+                  <h3 class="panel-title"><%= proyecto ? proyecto.nombreProyecto : ""%></h3>
+              </div>
+              <div class="panel-body">
+                  <p>Nombre: <%= proyecto ? proyecto.nombre : "" %></p>
+                  <p>Descripcion: <%= proyecto ? proyecto.descripcion : "" %></p>
+                  <p>Valor ofertado : $<%= proyecto? proyecto.valorPago : "" %></p>
+                  <h4><a  href=<%= postUrl? postUrl+ proyecto.nombre : ""%>> Ver Proyecto </a></h4>
+              </div>
+
+          </div>
+        </div>
+          <%
+          }); %>
+        <ul class="pagination">
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul>
+        <%} else
+        {%>
+            <h3>No tienes proyectos todavía</h3>
+        <% }%>
+
+
+
+    </div>
+</div>
+
+</div>
+
+<% include bottom.ejs%>

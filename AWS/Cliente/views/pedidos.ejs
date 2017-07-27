@@ -1,0 +1,134 @@
+<% include top.ejs%>
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDogDzCNpGOaS-8GOyqznisBloTt5VwQTs&callback=initialize">
+</script>
+
+
+<div class="jumbotron">
+<div class ="container-fluid">
+    <div class="navbar">
+        <%if(hideLogin){%>
+        <h3>  <%= title %></h3>
+        <p></p>
+        <%}%>
+    </div>
+          <%
+          if (arreglo && arreglo.length>0) {
+          arreglo.forEach(function(elemento, index) {
+          %>
+        <div class="inner">
+            <%
+            if (numeroAccion === 0) {
+            %>
+          <div class="panel panel-primary">
+              <div class="panel-heading">
+                  <h3 class="panel-title"><%= elemento ? "Código Pedido: "+elemento._id : ""%></h3>
+              </div>
+              <div class="panel-body">
+                  <p>Dirección envío: <%= elemento ? elemento.direccionEntrega : "" %></p>
+                  <p>Fecha de Solicitud: <%= elemento? elemento.fechaSolicitud : "" %></p>
+                  <div class="container">
+                      <p>Productos solicitados: </p>
+                      <%
+                      elemento.items.forEach(function(item) {
+                      %>
+                      <div class="panel panel-default">
+                          <div class="panel-body">
+                              <h4>Identificador producto: <%=item.productoId%>          Cantidad: <%=item.cantidad %></h4>
+                          </div>
+                      </div>
+                      <%
+                      })
+                      %>
+                  </div>
+                  <h4><a href=<%=  url+ elemento._id+'/procesarPedido'%>> Procesar este pedido  </a></h4>
+                  <h4><a href=<%=  url+ elemento._id+'/solicitudAbastecimiento' %>> Ver solicitudes de abastecimiento </a></h4>
+                  <h4><a href=<%=  url+ elemento._id+'/envio'%>> Ver envíos </a></h4>
+              </div>
+          </div>
+
+
+            <%
+            } else if(numeroAccion === 1) {
+            %>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= elemento ? "Solicitud para la bodega: "+elemento.bodegaId+" y el pedido: "+elemento.pedidoId : ""%></h3>
+                </div>
+                <div class="panel-body">
+                    <p>Fecha de solicitud: <%= elemento ? elemento.fechaSolicitud : "" %></p>
+                    <p>Identificación del operario encargado: <%= elemento? elemento.operarioId : "" %></p>
+                    <div class="container">
+                        <p>Productos solicitados a la bodega: </p>
+                        <%
+                        elemento.productosSolicitados.forEach(function(item) {
+                        %>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <h4>Identificador producto: <%=item.productoId%>  Cantidad: <%=item.cantidad %></h4>
+                            </div>
+                        </div>
+                        <%
+                        })
+                        %>
+                    </div>
+                    <h4><a href=<%=  url+elemento.pedidoId+'/bodega/'+ elemento.bodegaId+'/envio' %>> Crear envío </a></h4>
+                </div>
+            </div>
+
+
+            <%
+            } else if(numeroAccion === 2) {
+            %>
+            <% var mapaId = "googleMap"+index %>
+            <% var coordenadas=[] %>
+            <% elemento.ruta.forEach(trayecto=>{
+                coordenadas.push({lat: trayecto.inicio.latitud, lng: trayecto.inicio.longitud})
+                coordenadas.push({lat: trayecto.fin.latitud, lng: trayecto.fin.longitud})
+            })%>
+            <script>
+              function initialize() {
+                var mapProp = {
+                  center:new google.maps.LatLng(<%- JSON.stringify(coordenadas[0].lat)  %>,<%- JSON.stringify(coordenadas[0].lng)  %>),
+                  zoom:5,
+                  mapTypeId:google.maps.MapTypeId.ROADMAP
+                }
+                var map=new google.maps.Map(document.getElementById("<%= mapaId  %>"), mapProp);
+
+                var recorrido = new google.maps.Polyline({
+                  path: <%- JSON.stringify(coordenadas)  %>,
+                  geodesic: true,
+                  strokeColor: '#FF0000',
+                  strokeOpacity: 1.0,
+                  strokeWeight: 2
+                });
+                recorrido.setMap(map)
+              }
+              google.maps.event.addDomListener(window, 'load', initialize);
+            </script>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= elemento ? "Envío para el pedido: "+elemento.pedidoId+" con el conductor: "+elemento.conductorId : ""%></h3>
+                </div>
+                <div class="panel-body">
+                    <p>Distancia a recorrer: <%= elemento ? elemento.distancia : "" %></p>
+                    <p>Duración estimada: <%= elemento? elemento.duracion : "" %></p>
+                    <div id="<%=mapaId%>" style="width:500px;height:380px;"></div>
+                    <h4><a href=<%=  url+ elemento.bodegaId+'/conductor/'+elemento.conductorId %>> Realizar seguimiento </a></h4>
+                </div>
+            </div>
+            <%
+            }
+            %>
+        </div>
+          <%
+          }); %>
+        <%} else
+        {%>
+            <h3>No se encotraron los elementos solicitados</h3>
+        <% }%>
+    </div>
+</div>
+</div>
+<% include bottom.ejs%>

@@ -1,0 +1,24 @@
+<% include top.ejs %>
+<div class="jumbotron">
+    <div class ="container-fluid">
+    <div class="col-sm-6 col-md-3 col-ms-6 text-center hover-me">
+    <form class="form-signin" method="POST" action=<%= postUrl  %>>
+
+        <h2 class="form-signin-heading">Crear un nuevo proyecto</h2>
+        <label for="inputName" class="sr-only">Nombre</label>
+        <input type="text" id="inputName" name="nombre" class="form-control" placeholder="Nombre del proyecto" required >
+        <label for="inputDescription" class="sr-only">Descripcion</label>
+        <input type="text" id="inputDescription" name="descripcion" class="form-control" placeholder="Descripción del proyecto" required >
+        <label for="inputpago" class="sr-only">Pago</label>
+        <input type="number" id="inputpago" name="pago" class="form-control" placeholder="Valor a Ofertar" required >
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Crear proyecto">Registrar</button>
+
+    </form>
+
+        </div>
+    </div>
+</div>
+
+
+<% include bottom.ejs%>
