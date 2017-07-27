@@ -1,0 +1,36 @@
+﻿
+///// PER
+{
+"_id":"B1",
+"type":"Bodega",
+  "ciudad": "Pereira",
+  "direccion": "Cl. 22 32-2",
+  "ubicacionGeografica": {
+		"latitud":4.794615,
+		"longitud":-75.698188
+	}
+}
+
+////MDE
+{
+"_id":"B2",
+"type":"Bodega",
+  "ciudad": "Medellín",
+  "direccion": "Cl. 44 #52-165",
+  "ubicacionGeografica": {
+		"latitud":6.244909,
+		"longitud":-75.572181
+	}
+}
+
+////CAR
+{
+"_id":"B3",
+"type":"Bodega",
+  "ciudad": "Cartagena",
+  "direccion": "Cra. 85 #31-2",
+  "ubicacionGeografica": {
+		"latitud":10.383782,
+		"longitud":-75.466001
+	}
+}

@@ -1,0 +1,48 @@
+{
+"type":"Inventario",
+	"bodegaId":"B1",
+	"productoId":"P1",
+	"unidades":5
+},
+{
+	"bodegaId":"B1",
+	"productoId":"P2",
+"type":"Inventario",
+	"unidades":7
+},
+{
+"type":"Inventario",
+	"bodegaId":"B2",
+	"productoId":"P3",
+	"unidades":8
+},
+{
+"type":"Inventario",
+	"bodegaId":"B2",
+	"productoId":"P4",
+	"unidades":10
+},
+{
+"type":"Inventario",
+	"bodegaId":"B3",
+	"productoId":"P1",
+	"unidades":5
+},
+{
+"type":"Inventario",
+	"bodegaId":"B3",
+	"productoId":"P2",
+	"unidades":7
+},
+{
+"type":"Inventario",
+	"bodegaId":"B3",
+	"productoId":"P3",
+	"unidades":8
+},
+{
+"type":"Inventario",
+	"bodegaId":"B3",
+	"productoId":"P4",
+	"unidades":10
+}
