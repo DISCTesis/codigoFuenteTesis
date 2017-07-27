@@ -1,0 +1,26 @@
+﻿[{
+	"PartitionKey":"1",
+	"RowKey":"",
+	"tipoDocumento":"CC",
+	"numeroDocumento":1075674195,
+	"nombres":"Juan Sebastián",
+	"apellidos":"Castro Duarte",
+	"cargo":"Operario de area de entrega",
+	"fechaNacimiento":"1994 10 04",
+	"sangreRH":"O+"
+},
+{
+	"PartitionKey":"2",
+	"RowKey":"",
+	"tipoDocumento":"CC",
+	"numeroDocumento":1075674195,
+	"nombres":"Juan Moises",
+	"apellidos":"Castro Ballesteros",
+	"cargo":"Conductor",
+	"fechaNacimiento":"1968 10 24",
+	"sangreRH":"A+",
+	"numeroLicencia":"1548654554",
+	"fechaExpedicionLicencia":"1985 06 05",
+	"categoriaLicencia":"B3"
+}]
+arn:aws:s3:::4460d47f-8a88-466e-a7c3-1b2798ab5943

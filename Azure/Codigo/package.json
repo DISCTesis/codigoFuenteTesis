@@ -1,0 +1,15 @@
+{
+  "name": "procesarPedido",
+  "version": "1.0.0",
+  "description": "Azure Functions sample for the Serverless framework",
+  "main": "handler.js",
+  "keywords": [
+    "azure",
+    "serverless"
+  ],
+  "dependencies": {
+    "@google/maps": "^0.3.1",
+    "javascript-lp-solver": "^0.4.3",
+    "azure-storage": "^2.0.0"
+  }
+}

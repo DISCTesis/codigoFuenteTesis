@@ -1,0 +1,40 @@
+[{
+	"RowKey":"1",
+	"PartitionKey":"1",
+	"unidades":5
+},
+{
+	"RowKey":"1",
+	"PartitionKey":"2",
+	"unidades":7
+},
+{
+	"RowKey":"2",
+	"PartitionKey":"3",
+	"unidades":8
+},
+{
+	"RowKey":"2",
+	"PartitionKey":"4",
+	"unidades":10
+},
+{
+	"RowKey":"3",
+	"PartitionKey":"1",
+	"unidades":5
+},
+{
+	"RowKey":"3",
+	"PartitionKey":"2",
+	"unidades":7
+},
+{
+	"RowKey":"3",
+	"PartitionKey":"3",
+	"unidades":8
+},
+{
+	"RowKey":"3",
+	"PartitionKey":"4",
+	"unidades":10
+}]

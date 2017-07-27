@@ -1,0 +1,30 @@
+﻿{
+  "PartitionKey":"1",
+  "ciudad": "Pereira",
+  "direccion": "Cl. 22 32-2",
+  "ubicacionGeografica": "{
+		\"latitud\":4.794615,
+		\"longitud\":-75.698188
+	}"
+}
+{
+  "PartitionKey":"2",
+  "ciudad": "Medellín",
+  "direccion": "Cl. 44 #52-165",
+  "inventario": ["3","4"],
+  "ubicacionGeografica": "{
+		\"latitud\":6.244909,
+		\"longitud\":-75.572181
+	}"
+}
+
+{
+  "PartitionKey":"3",
+  "ciudad": "Cartagena",
+  "direccion": "Cra. 85 #31-2",
+  "inventario": ["1","2","3","4"],
+  "ubicacionGeografica": "{
+		\"latitud\":10.383782,
+		\"longitud\":-75.466001
+	}"
+}
