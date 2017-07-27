@@ -1,3 +1,4 @@
+Entrada(app/json):
 {
     "pedido": {
         "_id": "3937f7bcff0da6bf3d40a4b6bb409c7d",
@@ -36,7 +37,7 @@
         "type": "Empleado",
         "tipoDocumento": "CC",
         "numeroDocumento": 1075674195,
-        "nombres": "Juan Sebasti·n",
+        "nombres": "Juan Sebasti√°n",
         "apellidos": "Castro Duarte",
         "cargo": "Operario de area de entrega",
         "fechaNacimiento": "1994 10 04",
