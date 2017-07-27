@@ -3,10 +3,7 @@ const router = express.Router()
 const db = require('../utils/parametrosDynamo')
 const request = require('request-json')
 const client = request.createClient('https://enviospedido.azurewebsites.net/')
-const config = require('nconf')
-config.argv()
-  .env()
-  .file({file: './configuracion/recursosAWS.json'})
+
 
 /* GET lista de pedidos*/
 router.get('/', function (req, res) {
