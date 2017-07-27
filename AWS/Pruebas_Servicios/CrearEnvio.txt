@@ -1,3 +1,5 @@
+URL: '/:pedidoId/bodega/:bodegaId/envio'
+Entreda (app/json):
 {   "pedidoId":"1", 
 	"conductorId":"1",
 	"bodegaId":"1",
