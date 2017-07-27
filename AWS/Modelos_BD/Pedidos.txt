@@ -1,0 +1,37 @@
+{
+    "_id": "1",
+    "fechaSolicitud": "2017 03 25 19 51 00",
+    "direccionEntrega": "DG 4 A 28 A 82",
+    "fechaEntregaMaxima": "2017 03 27 19 51 00",
+    "esPagoEnEfectivo": 1,
+    "estadoActual": {
+        "_id": "1",
+        "descripcion": "En proceso",
+        "fechaAsignacion": "2017 03 25 19 51 00"
+    },
+    "estados": [1],
+    "items": [
+        {
+            "productoId": "1",
+            "cantidad": 5
+        },
+        {
+            "productoId": "2",
+            "cantidad": 7
+        },
+        {
+            "productoId": "3",
+            "cantidad": 8
+        },
+        {
+            "productoId": "4",
+            "cantidad": 10
+        }
+    ],
+    "ubicacionGeografica": {
+        "latitud": 5.012582,
+        "longitud": -73.993121
+    },
+    "solicitudesAbastecimiento": [],
+    "envios": []
+}

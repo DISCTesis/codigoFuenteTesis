@@ -1,0 +1,40 @@
+{
+	"bodegaId":"1",
+	"productoId":"1",
+	"unidades":5
+}
+{
+	"bodegaId":"1",
+	"productoId":"2",
+	"unidades":7
+}
+{
+	"bodegaId":"2",
+	"productoId":"3",
+	"unidades":8
+}
+{
+	"bodegaId":"2",
+	"productoId":"4",
+	"unidades":10
+}
+{
+	"bodegaId":"3",
+	"productoId":"1",
+	"unidades":5
+}
+{
+	"bodegaId":"3",
+	"productoId":"2",
+	"unidades":7
+}
+{
+	"bodegaId":"3",
+	"productoId":"3",
+	"unidades":8
+}
+{
+	"bodegaId":"3",
+	"productoId":"4",
+	"unidades":10
+}

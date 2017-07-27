@@ -1,0 +1,6 @@
+{   "pedidoId":"1", 
+	"conductorId":"1",
+	"bodegaId":"1",
+	"fechaDeEntrega": "2017-05-02T18:48:39.699Z",   
+	"fechaDeSalida": "2017-05-02T18:48:39.699Z" 
+}

@@ -1,0 +1,24 @@
+{
+	"_id":"1",
+	"tipoDocumento":"CC",
+	"numeroDocumento":1075674195,
+	"nombres":"Juan Sebastián",
+	"apellidos":"Castro Duarte",
+	"cargo":"Operario de area de entrega",
+	"fechaNacimiento":"1994 10 04",
+	"sangreRH":"O+"
+}
+
+{
+	"_id":"2",
+	"tipoDocumento":"CC",
+	"numeroDocumento":1075674195,
+	"nombres":"Juan Moises",
+	"apellidos":"Castro Ballesteros",
+	"cargo":"Conductor",
+	"fechaNacimiento":"1968 10 24",
+	"sangreRH":"A+",
+	"numeroLicencia":"1548654554",
+	"fechaExpedicionLicencia":"1985 06 05",
+	"categoriaLicencia":"B3"
+}

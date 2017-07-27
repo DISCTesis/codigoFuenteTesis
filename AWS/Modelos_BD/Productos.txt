@@ -1,0 +1,24 @@
+{
+	"_id":"1",
+	"nombre": "Televisor SAMSUNG UHD 40 pulgadas",
+	"descripcion":"Televison UHD 4k intenet wifi smaTTV marca samsung",
+	"precio": 1399999
+}
+{
+	"_id":"2",
+	"nombre": "NEVERA ASSENTO 46L CE 1 P TI",
+	"descripcion":"Capacidad 46 litros, color titanio, diseño cómodo y compacto ideal para habitaciones y oficinas, congelador independiente con puerta abatible, bandeja para descongelación multiusos, espacios y compartimientos para bebidas, frutas y pequeños alimentos, puerta con llave de seguridad, eficiencia energética tipo A ahorro de energía, control de temperatura manual.",
+	"precio": 5149000
+}
+{
+	"_id":"3",
+	"nombre": "Televisor SAMSUNG UHD 40 pulgadas",
+	"descripcion":"Televison UHD 4k intenet wifi smaTTV marca samsung",
+	"precio": 1399999
+}
+{
+	"_id":"4",
+	"nombre": "Aire Acondicionado MABE 9000 BTU MMT09CABW Blanco",
+	"descripcion":"No importa lo pequeño que sea tu espacio, ten el control del ambiente de tu hogar con este aire acondicionado mabe de última generación graduando su temperatura con el práctico control remoto.",
+	"precio": 711685
+}
